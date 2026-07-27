@@ -1,0 +1,40 @@
+@import "../styles/tokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: rgb(var(--color-canvas));
+  color: rgb(var(--color-background));
+}
+
+::selection {
+  background-color: rgb(var(--color-gold));
+  color: rgb(var(--color-navy));
+}
+
+/* Visible keyboard focus everywhere, pairs with --shadow-focus for components
+   that need a ring on a non-outline element (e.g. custom cards, buttons). */
+:focus-visible {
+  outline: 2px solid rgb(var(--color-focus-ring));
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,128 @@
+/**
+ * BridgeWorks Africa, Design Tokens
+ * Source: Visual Identity System v2.0
+ *
+ * Colours are stored as space-separated RGB triplets (not hex) so Tailwind's
+ * opacity modifiers (e.g. bg-navy/10) work via rgb(var(--x) / <alpha-value>).
+ * This file is the single source of truth, tailwind.config.ts and
+ * lib/design-tokens.ts both derive their values from it. If a colour or
+ * scale changes, change it here first.
+ */
+
+:root {
+  /* ---------------------------------------------------------------- */
+  /* COLOUR, PRIMARY                                                  */
+  /* ---------------------------------------------------------------- */
+  --color-navy: 18 53 91;            /* #12355B, trust, governance, authority */
+  --color-navy-dark: 12 37 64;       /* #0C2540, hover/pressed state */
+  --color-navy-light: 30 69 118;     /* #1E4576, tints, subtle emphasis */
+
+  /* ---------------------------------------------------------------- */
+  /* COLOUR, SECONDARY / ACCENT                                      */
+  /* ---------------------------------------------------------------- */
+  --color-gold: 200 155 60;          /* #C89B3C, growth, opportunity, emphasis */
+  --color-gold-dark: 169 129 46;     /* #A9812E, hover/pressed state */
+  --color-gold-light: 219 183 97;    /* #DBB761, tints, badges */
+
+  --color-forest: 46 125 50;         /* #2E7D32, sustainability, secondary accent */
+  --color-forest-dark: 36 95 39;     /* #245F27 */
+
+  /* ---------------------------------------------------------------- */
+  /* COLOUR, NEUTRALS                                                 */
+  /* ---------------------------------------------------------------- */
+  --color-slate: 95 107 122;         /* #5F6B7A, muted text, neutral professionalism */
+  --color-slate-light: 136 146 160;  /* #8892A0 */
+
+  --color-background: 247 246 243;   /* #F7F6F3, Warm White, reused as light text/accents on dark canvas */
+  --color-surface: 255 255 255;      /* #FFFFFF, cards, inputs, nav/footer chrome stay light "paper" on the dark canvas */
+  --color-muted: 238 236 231;        /* muted surface tint, derived from Warm White */
+
+  /* Page canvas, the site's base background. Dark, derived from Navy, not pure black. */
+  --color-canvas: 9 22 39;           /* #091627, darker than navy-dark, the default page backdrop */
+  --color-canvas-alt: 18 53 91;      /* same as Navy, alternate section rhythm, one shade lighter than canvas */
+  --color-canvas-forest: 12 30 27;   /* dark navy/forest blend, for sections that want a green cast */
+
+  --color-text: 30 35 40;            /* #1E2328, Ink, body copy (not a brand colour, working neutral) */
+  --color-text-muted: 95 107 122;    /* same as slate, secondary text */
+
+  --color-border: 18 53 91;          /* navy, used at low opacity for hairlines */
+
+  /* ---------------------------------------------------------------- */
+  /* COLOUR, INTERACTION STATES                                      */
+  /* ---------------------------------------------------------------- */
+  --color-hover-primary: 12 37 64;   /* navy-dark */
+  --color-hover-secondary: 169 129 46; /* gold-dark */
+  --color-focus-ring: 200 155 60;    /* gold, visible focus indicator */
+
+  /* ---------------------------------------------------------------- */
+  /* COLOUR, SEMANTIC / SYSTEM                                       */
+  /* ---------------------------------------------------------------- */
+  --color-success: 46 125 50;        /* #2E7D32, reuses Forest Green */
+  --color-warning: 184 128 46;       /* #B8802E, amber, brand-adjacent to gold */
+  --color-error: 179 38 30;          /* #B3261E, muted brick red, restrained not alarmist */
+
+  /* ---------------------------------------------------------------- */
+  /* TYPOGRAPHY                                                        */
+  /* ---------------------------------------------------------------- */
+  --font-display: "Manrope", ui-sans-serif, system-ui, sans-serif;
+  --font-body: "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* type scale: size / line-height / letter-spacing / weight */
+  --text-display-size: 3.5rem;   --text-display-lh: 1.05; --text-display-ls: -0.02em; --text-display-weight: 800;
+  --text-h1-size: 2.75rem;       --text-h1-lh: 1.1;       --text-h1-ls: -0.015em;     --text-h1-weight: 700;
+  --text-h2-size: 2.125rem;      --text-h2-lh: 1.15;      --text-h2-ls: -0.01em;      --text-h2-weight: 700;
+  --text-h3-size: 1.5rem;        --text-h3-lh: 1.25;      --text-h3-ls: -0.005em;     --text-h3-weight: 600;
+  --text-h4-size: 1.25rem;       --text-h4-lh: 1.3;       --text-h4-ls: 0em;          --text-h4-weight: 600;
+  --text-body-size: 1.0625rem;   --text-body-lh: 1.6;     --text-body-ls: 0em;        --text-body-weight: 400;
+  --text-small-size: 0.9375rem;  --text-small-lh: 1.55;   --text-small-ls: 0em;       --text-small-weight: 400;
+  --text-caption-size: 0.8125rem; --text-caption-lh: 1.4; --text-caption-ls: 0.01em;  --text-caption-weight: 500;
+  --text-button-size: 0.9375rem; --text-button-lh: 1;     --text-button-ls: 0em;      --text-button-weight: 600;
+  --text-label-size: 0.8125rem;  --text-label-lh: 1.2;    --text-label-ls: 0.04em;    --text-label-weight: 600;
+
+  /* ---------------------------------------------------------------- */
+  /* SPACING, 8pt system (4px half-step permitted for fine adjustments) */
+  /* ---------------------------------------------------------------- */
+  --space-1: 0.25rem;   /* 4px  */
+  --space-2: 0.5rem;    /* 8px  */
+  --space-3: 0.75rem;   /* 12px */
+  --space-4: 1rem;      /* 16px */
+  --space-5: 1.5rem;    /* 24px */
+  --space-6: 2rem;      /* 32px */
+  --space-7: 2.5rem;    /* 40px */
+  --space-8: 3rem;      /* 48px */
+  --space-9: 4rem;      /* 64px */
+  --space-10: 5rem;     /* 80px */
+  --space-11: 6rem;     /* 96px */
+  --space-12: 8rem;     /* 128px */
+
+  /* ---------------------------------------------------------------- */
+  /* BORDER RADIUS                                                     */
+  /* ---------------------------------------------------------------- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+
+  /* ---------------------------------------------------------------- */
+  /* SHADOWS, restrained, low-opacity navy, never pure black          */
+  /* ---------------------------------------------------------------- */
+  --shadow-card: 0 1px 2px rgba(18, 53, 91, 0.06), 0 4px 16px rgba(18, 53, 91, 0.06);
+  --shadow-elevated: 0 4px 8px rgba(18, 53, 91, 0.08), 0 12px 32px rgba(18, 53, 91, 0.1);
+  --shadow-focus: 0 0 0 3px rgba(200, 155, 60, 0.35);
+
+  /* ---------------------------------------------------------------- */
+  /* MOTION                                                            */
+  /* ---------------------------------------------------------------- */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --duration-fast: 150ms;
+  --duration-base: 250ms;
+  --duration-slow: 500ms;
+
+  /* ---------------------------------------------------------------- */
+  /* LAYOUT                                                            */
+  /* ---------------------------------------------------------------- */
+  --content-max-width: 1200px;
+  --header-height: 4.5rem; /* 72px */
+}
